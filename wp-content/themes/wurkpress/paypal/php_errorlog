@@ -1,0 +1,5 @@
+[09-Mar-2017 21:25:32 UTC] WordPress database error Column count doesn't match value count at row 1 for query INSERT INTO `sp_donors` (``) VALUES ()
+[11-Mar-2017 14:51:55 UTC] WordPress database error Column count doesn't match value count at row 1 for query INSERT INTO `sp_donors` (``) VALUES ()
+[25-Mar-2017 05:14:47 UTC] WordPress database error Column count doesn't match value count at row 1 for query INSERT INTO `sp_donors` (``) VALUES ()
+[29-Mar-2017 13:14:25 UTC] WordPress database error Column count doesn't match value count at row 1 for query INSERT INTO `sp_donors` (``) VALUES ()
+[16-Apr-2017 02:17:40 UTC] WordPress database error Column count doesn't match value count at row 1 for query INSERT INTO `sp_donors` (``) VALUES ()

@@ -1,0 +1,14 @@
+# track this file .gitignore (i.e. do NOT ignore it)
+!.gitignore
+
+# ignore node/grunt dependency directories
+node_modules/
+
+# ignore node/grunt dependency directories
+.idea/
+
+# smbdelete
+.smbdeleteAAA13964.4
+
+# ds store
+._.DS_Store
