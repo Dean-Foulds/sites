@@ -1,4 +1,5 @@
 jQuery(document).ready(function() {
+    jQuery('[data-amount]').first().addClass('active');
 
     // Setup default amount
     jQuery('<input>').attr({
@@ -31,6 +32,7 @@ jQuery(document).ready(function() {
     jQuery('#toggle-paypal').show();
     jQuery('#month').hide();
     jQuery('#one').show();
+
 
     jQuery('[data-donation-type]').click(function(e) {
 
@@ -67,6 +69,8 @@ jQuery(document).ready(function() {
 
     });
 
+
+
     jQuery('[data-amount]').click(function(e) {
 
         jQuery('[data-amount]').removeClass('active');
@@ -82,7 +86,7 @@ jQuery(document).ready(function() {
         jQuery('#other-amount').val('');
         jQuery('html, body').animate({
             scrollTop: jQuery("#pay-card").offset().top
-        }, 2000);
+        }, 1800);
     });
 
     jQuery('[data-other-amount]').change(function(e) {
