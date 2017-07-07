@@ -37,14 +37,16 @@ jQuery(document).ready(function() {
     jQuery('[data-donation-type]').click(function(e) {
 
         jQuery('[data-donation-type]').removeClass('active');
+        jQuery('[donation-amount]').first().addClass('active');
 
 
         var donation_type = jQuery(this).attr('data-donation-type');
         if (donation_type == 'monthly') {
             jQuery(this).addClass('active');
             jQuery('#month').show();
+
             jQuery('#donation-type').val('monthly');
-            jQuery('[data-donation-title]').html('Monthly Donation Amount');
+            jQuery('.data-donation-title').html('Monthly Donation Amount');
             jQuery('#donation-form-step-1').attr('action', jQuery("#monthly-url").attr('data-url'));
             jQuery('#toggle-paypal').hide();
             jQuery('#one').hide();
