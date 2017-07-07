@@ -101,7 +101,7 @@
 											// loop through the rows of data
 											while (have_rows('donation_options_month')) : the_row(); ?>
 
-												<div class="donation-amount-row" data-amount="<?php the_sub_field('donation_amount_month'); ?>">
+												<div class="donation-amount-row" data-amount-month="<?php the_sub_field('donation_amount_month'); ?>">
 													<div class="row">
 														<div class="small-3 columns donation-amount">
 															£<?php the_sub_field('donation_amount_month'); ?>

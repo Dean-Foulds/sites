@@ -37,17 +37,18 @@ jQuery(document).ready(function() {
     jQuery('[data-donation-type]').click(function(e) {
 
         jQuery('[data-donation-type]').removeClass('active');
-        jQuery('[donation-amount]').first().addClass('active');
+        jQuery('[data-amount]').first().removeClass('active');
+
 
 
         var donation_type = jQuery(this).attr('data-donation-type');
         if (donation_type == 'monthly') {
             jQuery(this).addClass('active');
             jQuery('#month').show();
-
             jQuery('#donation-type').val('monthly');
             jQuery('.data-donation-title').html('Monthly Donation Amount');
             jQuery('#donation-form-step-1').attr('action', jQuery("#monthly-url").attr('data-url'));
+            jQuery('[data-amount-month]').first().addClass('active');
             jQuery('#toggle-paypal').hide();
             jQuery('#one').hide();
             jQuery("#pay-card").html('Direct Debit')
@@ -80,6 +81,24 @@ jQuery(document).ready(function() {
 
 
         jQuery("#donationfix").val(jQuery(this).attr('data-amount'));
+
+        if (jQuery('#donation-type').val() == 'monthly') {
+            jQuery('#donation-form-step-1').attr('action', jQuery("#monthly-url").attr('data-url') + '/?amount=' + jQuery('#donationfix').val());
+        }
+
+        jQuery('#other-amount').val('');
+        jQuery('html, body').animate({
+            scrollTop: jQuery("#pay-card").offset().top
+        }, 1800);
+    });
+
+    jQuery('[data-amount-month]').click(function(e) {
+
+        jQuery('[data-amount-month]').removeClass('active');
+        jQuery(this).addClass('active');
+
+
+        jQuery("#donationfix").val(jQuery(this).attr('data-amount-month'));
 
         if (jQuery('#donation-type').val() == 'monthly') {
             jQuery('#donation-form-step-1').attr('action', jQuery("#monthly-url").attr('data-url') + '/?amount=' + jQuery('#donationfix').val());
